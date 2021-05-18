@@ -9,7 +9,7 @@ printf("Type any number:");
 scanf_s("%d", &num1);
 for (i = 1; i != 20; i++) {
 	num2 = num1 * i;
-	printf("%d x %d = %d", num1, i, num2);
+	printf("%d x %d = %d\n", num1, i, num2);
 }
 return 0;
 }
