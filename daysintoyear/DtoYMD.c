@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Days into Year, Month and Days
 int main()
 {
 float days, year,month, remday;
