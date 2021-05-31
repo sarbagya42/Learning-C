@@ -3,13 +3,12 @@
 //Days into Year, Month and Days
 int main()
 {
-double days, year,month, remday,k;
+float days, year,month, remday,k;
 printf("Total days:");
-scanf("%lf",&days);
+scanf("%f",&days);
 year=days/365;
 month=(year-(int)year)*12;
 k=month-(int)month;
-printf("%f",k);
 remday=(k)*31;
 if(k>=0.5){
     remday=remday+1;
