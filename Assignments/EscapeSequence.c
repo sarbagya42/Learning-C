@@ -1,5 +1,5 @@
 // C program to illustrate
-// \n escape sequence
+// \n \a escape sequence
 #include <stdio.h>
 int main()
 {
