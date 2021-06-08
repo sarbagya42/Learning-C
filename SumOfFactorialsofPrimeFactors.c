@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+//Sum of Factorials of Prime Factors of the given number.
 
 int main()
 {
