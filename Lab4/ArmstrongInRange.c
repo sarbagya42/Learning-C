@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <math.h>
+//Armstrong in range n1,n2
 int main()
 {
   int n1,n2,i,b,c=0,m;
