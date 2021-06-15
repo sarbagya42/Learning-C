@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// Fibonacci till n terms
 int main()
 {
     int num1;
