@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+//Reverse and Palindrome
 int main()
 {
     int num1,store,c=0,num2,b,k,s;
