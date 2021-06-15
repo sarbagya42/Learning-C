@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Prime Checker
 int main()
 {
     int a,b,c=0,i;
