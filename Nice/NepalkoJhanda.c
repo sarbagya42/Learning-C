@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Nepal Ko Jhanda
 int main()
 {
     int k;
