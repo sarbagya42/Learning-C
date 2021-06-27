@@ -3,11 +3,11 @@
 int swap(int,int);
 int main()
 {
-    int a,b,store;
+    int a,b;
     printf("Type any two numbers:");
     scanf("%d %d",&a,&b);
     printf("\nValue before swap is %d %d\n",a,b);
-    store=swap(a,b);
+    swap(a,b);
     printf("\nValue after swap is %d %d\n",a,b);
     return 0;
 }
