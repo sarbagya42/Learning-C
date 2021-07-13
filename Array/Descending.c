@@ -16,7 +16,7 @@ for(i=0; i<n; i++)
 {
     for(j=i+1; j<n; j++)
     {
-        if(num[i]>num[j])
+        if(num[i]<num[j])
         {
          store=num[j];
          num[j]=num[i];
