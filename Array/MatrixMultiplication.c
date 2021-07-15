@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-//Matrix Multiplication by Sarbagya
+//MATRIX MULTIPLICATION BY SARBAGYA
 int prime(int);
 int main()
 {
