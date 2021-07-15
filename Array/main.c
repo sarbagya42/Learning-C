@@ -34,7 +34,8 @@ int main()
             scanf("%d",&mat2[i][j]);
         }
     }
-        for(i=0; i<o1; i++){ //m,n,p,q 01,o2,p1,p2
+    // MULTIPLICATION PART
+        for(i=0; i<o1; i++){ 
         for(j=0; j<p2; j++)
     {
         for(k=0; k<o2; k++)
