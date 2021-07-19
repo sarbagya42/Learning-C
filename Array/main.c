@@ -1,56 +1,104 @@
 #include <stdio.h>
 #include <stdlib.h>
-//WAP to read 10 numbers
-//and reorder them in ... by Anku Jaiswal
-
-//Anku Jaiswal4:27 PM
-//WAP to read 10 numbers and reorder them in
-//ascending order using function sor(),read(), display().
-int display(int x[]);
-int sort(int y[]);
-int read(int z[]);
-int i;
+int read(int x[10][10], int y[10][10],int, int,int);
+int multiply(int p[10][10], int q[10][10],int, int, int, int);
+int display(int h[10][10],int i[10][10],int f[10][10],int, int, int, int);
+int i,j;
 int main()
 {
-    int num[10];
-    read(num);
+    int num1[10][10],num2[10][10],a,b,m,n,c=0,j,k;
+    printf("Type the order of first matrix:");
+    scanf("%d %d",&m,&n);
+    printf("Type the order of second matrix:");
+    scanf("%d %d",&j,&k);
+    if(n!=j)
+    {
+        printf("Invalid Order for Multiplication.");
+        return 0;
+    }
+    read(num1,num2,m,n,c);
+    c=c+1;
+    read(num1,num2,j,k,c);
 return 0;
 }
 
-read(int x[])
+int read(int num1[10][10],int num2[10][10],int m,int n,int c)
 {
-    int i,b;
-    for(i=1; i<=10; i++)
+    int i,j,o,s;
+    if(c==0){
+    o=m;
+    s=n;
+    printf("\n Matrix A:\n");
+    for(i=0; i<m; i++)
     {
-        printf("Type:");
-        scanf("%d",&b);
-        x[i]=b;
-    }
-    sort(x);
-}
-
-sort(int y[])
-{
-    int i,store,j;
-    for(i=0; i<10; i++)
-{
-    for(j=i+1; j<10; j++)
-    {
-        if(y[i]>y[j])
+        for(j=0; j<n; j++)
         {
-         store=y[j];
-         y[j]=y[i];
-         y[i]=store;
+            printf("Type Element %d%d:",i+1,j+1);
+            scanf("%d",&num1[i][j]);
+        }
+    }
+}else
+{
+    printf("\n Matrix B:\n");
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            printf("Type Element %d%d:",i+1,j+1);
+            scanf("%d",&num2[i][j]);
         }
     }
 }
-display(y);
-}
-display(int z[])
+if(c==1)
 {
-    int i;
-    for(i=0; i<10; i++)
+    multiply(num1,num2,o,s,m,n);
+}
+}
+int multiply(int num1[10][10],int num2[10][10],int o, int s, int m, int n)
+{
+   int i,j,k,sum=0,mul[10][10];
+   for(i=0; i<o; i++)
+   {
+       for(j=0; j<n; j++)
+       {
+           for(k=0; k<s; k++)
+           {
+               sum=sum+num1[i][k]*num2[k][j];
+           }
+        mul[i][j]=sum;
+        sum=0;
+       }
+   }
+   display(num1,num2,mul,o,s,m,n);
+}
+int display(int num1[10][10],int num2[10][10],int mul[10][10],int o, int s, int m, int n)
+{
+    int i,j;
+    printf("Matrix A:\n");
+    for(i=0; i<o; i++)
     {
-        printf("\n%d",z[i]);
+        for(j=0; j<s; j++)
+        {
+            printf("\t%d",num1[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Matrix B:\n");
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            printf("\t%d",num2[i][j]);
+        }
+        printf("\n");
+    }
+       printf("Matrix AxB:\n");
+    for(i=0; i<o; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            printf("\t%d",mul[i][j]);
+        }
+        printf("\n");
     }
 }
