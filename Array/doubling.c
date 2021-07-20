@@ -40,8 +40,7 @@ int display(int doub[10][10], int mat[10][10])
         }
         printf("\n");
     }
-    printf("\n Doubled Matrix is:");
-    printf("\n");
+    printf("\n Doubled Matrix is:\n");
     for(i=0; i<m; i++)
     {
         for(j=0; j<n; j++)
