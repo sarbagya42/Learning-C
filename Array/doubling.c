@@ -31,8 +31,7 @@ display(doub,mat);
 int display(int doub[10][10], int mat[10][10])
 {
     int i,j;
-    printf("\n Original Matrix:");
-    printf("\n");
+    printf("\n Original Matrix:\n");
     for(i=0; i<m; i++)
     {
         for(j=0; j<n; j++)
