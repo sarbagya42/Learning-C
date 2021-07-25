@@ -3,7 +3,7 @@
 
 int main(){
 int a[10][10],b[10][10],sum[10][10];
-int i,j,k,l,m,n;
+int i,j,m,n;
 printf("Type Order:");
 scanf("%d %d",&m,&n);
 for(i=0; i<m; i++)
