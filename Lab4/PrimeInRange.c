@@ -14,7 +14,7 @@ for(i=n1; i!=n2; i++){
             c=c+1;
         }
         }
-        if(c<=2){
+        if(c<=2 && i!=n1 && i!=n2){
         printf("\n\t%d",i);
         }
 c=0;
