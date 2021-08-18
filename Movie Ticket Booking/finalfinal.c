@@ -43,7 +43,7 @@ int main()
   	do
     {
          printf("\n\t\t\t\t\t===================================\n");
-     printf("\t\t\t\t\t\t WELCOME TO THEATRE C\n");
+     printf("\t\t\t\t\t\t WELCOME TO THE THEATRE C\n");
       printf("\t\t\t\t\t===================================\n");
     printf("\n");
         printf("\n");
