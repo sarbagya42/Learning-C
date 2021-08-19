@@ -129,9 +129,26 @@ void adminmode()
     int p;
     char ok[10];
     system("cls");
-    printf("\n\t\t\tType the Admin Password:");
-    gets(ok);
-    gets(ok);
+    char c;
+   int index = 0;
+printf("\n\t\t\tType the Admin Password:");
+   /* 13 is ASCII value of Enter key */
+   while((c = getch())!=13){
+       if(index < 0)
+           index = 0;
+       /* 8 is ASCII value of BACKSPACE character */
+       if(c==8)
+        {
+           putch('\b');
+           putch(NULL);
+           putch('\b');
+           index--;
+       continue;
+       }
+       ok[index++] = c;
+       putch('*');
+   }
+   ok[index] = '\0';
     if(strcmp(ok,ma)==0)
     {
     printf("\nTYPE '1' to INSERT MOVIE\n\nTYPE '2' TO VIEW ALL TRANSACTIONS\n\nTYPE '3' TO VIEW ALL REGISTRATIONS");
@@ -235,8 +252,25 @@ int loginn()
     struct logon a;
     printf("\n\t\t\tUSER NAME:");
     gets(usernam);
-    printf("\n\t\t\tPASSWORD:");
-    gets(pass);
+   char c;
+   int index = 0;
+   printf("\n\n\t\t\tPASSWORD:");
+   /* 13 is ASCII value of Enter key */
+   while((c = getch()) != 13){
+       if(index < 0)
+           index = 0;
+       /* 8 is ASCII value of BACKSPACE character */
+       if(c == 8){
+           putch('\b');
+           putch(NULL);
+           putch('\b');
+           index--;
+       continue;
+       }
+       pass[index++] = c;
+       putch('*');
+   }
+   pass[index] = '\0';
     FILE *bpp;
     bpp=fopen("loginn.txt","r+b");
     while(fread(&a,sizeof(struct logon),1,bpp))
