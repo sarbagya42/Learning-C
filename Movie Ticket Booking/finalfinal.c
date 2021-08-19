@@ -43,24 +43,30 @@ int main()
     int d=1;
   	do
     {
-         printf("\n\t\t\t\t\t===================================\n");
-     printf("\t\t\t\t\t\t WELCOME TO THE THEATRE C\n");
-      printf("\t\t\t\t\t===================================\n");
-    printf("\n");
         printf("\n");
-        printf("\n\t\t\t====================================================================\n");
         printf("\n");
-        printf("\t\t\t\t\t\tMOVIE TICKET BOOKING SYSTEM ");
         printf("\n");
-        printf("\n\t\t\t====================================================================");
-        printf("\n\t\t\t\t\tPress <1> LOGIN OR REGISTER TO BOOK A MOVIE\n");
-        printf("\n\t\t\t\t\tPress <2> ADMIN MODE\n");
-        printf("\n\t\t\t\t\tPress <3> VIEW ALL MOVIES\n");
-        printf("\n\t\t\t\t\tPress <4> FIND MOVIE\n");
-        printf("\n\t\t\t\t\tPress <5> ABOUT US\n");
-        printf("\n\t\t\t\t\tPress <6> SUPPORT\n");
-        printf("\n\t\t\t\t\tPress <0> EXIT\n");
-        printf("\n\t\t\tEnter your Choice ::");
+        printf("\n");
+         printf("\n\t\t\t\t\t\t\t\t\t===================================\n");
+      printf("\t\t\t\t\t\t\t\t\t\t WELCOME TO THE THEATRE C\n");
+      printf("\t\t\t\t\t\t\t\t\t\===================================\n");
+      printf("\n");
+      printf("\n");
+        printf("\n");
+        printf("\n\t\t\t\t\t\t\t====================================================================\n");
+        printf("\n");
+        printf("\t\t\t\t\t\t\t\t\t\tMOVIE TICKET BOOKING SYSTEM ");
+        printf("\n");
+        printf("\n\t\t\t\t\t\t\t====================================================================");
+        printf("\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <1> LOGIN OR REGISTER TO BOOK A MOVIE\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <2> ADMIN MODE\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <3> VIEW ALL MOVIES\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <4> FIND MOVIE\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <5> ABOUT US\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <6> SUPPORT\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <0> EXIT\n");
+        printf("\n\t\t\t\t\t\t\tEnter your Choice ::");
         scanf("%d",&ch);
         switch (ch)
         {
@@ -116,7 +122,7 @@ void support()
 {
     system("cls");
     printf("\t\t\t\t\t|||CUSTOMER SUPPORT|||\n");
-    printf("\n\t\t\t\tIF YOU HAVE ANY QUERIES YO CAN CONTACT US AT:\n\n\t\t\t\t\t+977-9862262314 (Sarbagya)\n\n \t\t\t\t\t+977-9841097032 (Rhythm)\n\n\t\t\t\t\t+977-9800775643 (Aabhash)\n\n\t\t\t\t\t+977-9877665363 (Pranesh)\n\n\t\t\tAlso you can email us at: attidamiproject23@cmail.com\n");
+    printf("\n\t\t\t\tIF YOU HAVE ANY QUERIES YO CAN CONTACT US AT:\n\n\t\t\t\t\t+977-9823833365 (Sarbagya)\n\n \t\t\t\t\t+977-9862262314 (Rhythm)\n\n\t\t\t\t\t+977-9849186540(Aabhash)\n\n\t\t\t\t\t+977-9866547115(Pranesh)\n\n\t\t\tAlso you can email us at: attidamiprojects69@cmail.com\n");
 }
 void adminmode()
 {
@@ -173,10 +179,11 @@ void loginsystem(int m)
     int option;
     if(m==5)
     {
-        printf("\n\n\n\t\t\tWRONG CREDENTIALS!! KINDLY REGISTER FIRST OR TRY AGAIN\n");
+        printf("\n\n\n\t\t\tWRONG CREDENTIALS!! KINDLY REGISTER FIRST OR TRY AGAIN.\n");
     }
-    printf("\n\t\t\tPress '1' to REGISTER\n\t\t\tPress '2' to LOGIN\n\n");
-    printf("\t\t\tPRESS (1 / 2):");
+    printf("\n\t\t\tPress <0> MAIN MENU\n");
+    printf("\t\t\tPress <1> to REGISTER\n\t\t\tPress <2> to LOGIN\n\n");
+    printf("\t\t\tPRESS (<1>/<2>/<0>):");
     scanf("\t\t\t%d",&option);
     getchar();
     if(option == 1)
@@ -188,6 +195,11 @@ void loginsystem(int m)
     {
         system("CLS");
         loginn();
+    }
+     else if(option == 0)
+    {
+        system("CLS");
+        main();
     }
     else
     {
@@ -212,7 +224,7 @@ int registration()
     fwrite(&a,sizeof(struct logon),1,app);
     fclose(app);
     system("cls");
-    printf("\t\t\t\t\t\tREGISTRATION SUCCESSFUL");
+    printf("\t\t\t\t\t\t!!REGISTRATION SUCCESSFUL!!");
 }
 int loginn()
 {
@@ -287,7 +299,7 @@ void insert_details()
 	printf("Enter  name :- ");
 	gets(b.name);
 	gets(b.name);
-	printf("Enter Release Date:- ");
+	printf("Enter Release Year:- ");
 	scanf("%d",&b.date);
 	printf("Enter Ticket Price:- ");
 	scanf("%d",&b.cost);
@@ -418,7 +430,7 @@ void book_ticket()
             printf("\n");
         }
     }
-    fp = fopen("data.txt","r");
+    fp = fopen("data.txt","r+b");
 	if(fp == NULL)
 	{
 		printf("file not found !");
@@ -487,18 +499,18 @@ void book_ticket()
     }
 	total_amount = tempprice * total_seat;
     system("cls");
-	printf("\n\t\t\t\t\t\t ***** ENJOY THE MOVIE ****\n");
-	printf("\n\t\t\t\t\t\t-------Costumer Details:-------\n");
-	printf("\n\t\t\t\t\t\tName : %s\n",name);
-	printf("\n\t\t\t\t\t\tMobile Number:");
+	printf("\n\t\t\t\t\t\t\t\t\t\t ***** ENJOY THE MOVIE ****\n");
+	printf("\n\t\t\t\t\t\t\t\t\t\t-------Costumer Details:-------\n");
+	printf("\n\t\t\t\t\t\t\t\t\t\tName : %s\n",name);
+	printf("\n\t\t\t\t\t\t\t\t\t\tMobile Number:");
 	puts(mobile);
-	printf("\n\t\t\t\t\t\tMovie Name:");
+	printf("\n\t\t\t\t\t\t\t\t\t\tMovie Name:");
 	puts(tempname);
-	printf("\n\t\t\t\t\t\tTotal Seats : %d\n",total_seat);
-	printf("\n\t\t\t\t\t\tCost per ticket : %d\n",tempprice);
-	printf("\n\t\t\t\t\t\tTotal Amount : %d\n",total_amount);
-	printf("\n\t\t\t\t\t\tSeats Chosen:\n");
-	printf("\t\t\t\t\t\t\t");
+	printf("\n\t\t\t\t\t\t\t\t\t\tTotal Seats : %d\n",total_seat);
+	printf("\n\t\t\t\t\t\t\t\t\t\tCost per ticket : %d\n",tempprice);
+	printf("\n\t\t\t\t\t\t\t\t\t\tTotal Amount : %d\n",total_amount);
+	printf("\n\t\t\t\t\t\t\t\t\t\tSeats Chosen\n");
+	printf("\t\t\t\t\t\t\t\t\t\t\t");
     for(i=0; i<total_seat; i++)
     {
         printf("%d\t",seat[i]);
@@ -517,7 +529,7 @@ void book_ticket()
 	else
 	{
 		fwrite(&o,sizeof(struct old),1,ufp);
-		printf("\n\n\t\t\t\t\t\t||SUCCESSFULLY RECORDED||");
+		printf("\n\n\t\t\t\t\t\t\t\t\t\t||SUCCESSFULLY RECORDED||");
 	}
     printf("\n");
 	fclose(ufp);
