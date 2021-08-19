@@ -35,6 +35,7 @@ void book_ticket(); //for booking tickets
 void old_record(); //for view old recorrds of users,booked tickets
 void adminmode();
 void support();
+void allusers();
 int main()
 {
     system("color 2");
@@ -91,6 +92,26 @@ int main()
         }
     }while(ch!=0);
 }
+void allusers()
+{
+    printf("\n\t\t\t\t\tALL REGISTRATIONS\n");
+    struct logon a;
+    FILE *bpp;
+    bpp=fopen("loginn.txt","r+b");
+    while(fread(&a,sizeof(struct logon),1,bpp))
+    {
+        printf("\n_________________________________\n");
+        printf("NAME:");
+        puts(a.fname);
+        printf("USERNAME:");
+        printf("%s",a.username);
+        printf("\nPASSWORD:");
+        printf("%s",a.password);
+        printf("\n");
+        printf("__________________________________");
+    }
+    fclose(bpp);
+}
 void support()
 {
     system("cls");
@@ -107,7 +128,8 @@ void adminmode()
     gets(ok);
     if(strcmp(ok,ma)==0)
     {
-    printf("\nTYPE '1' to INSERT MOVIE\n\nTYPE '2' TO VIEW ALL TRANSACTIONS:\n");
+    printf("\nTYPE '1' to INSERT MOVIE\n\nTYPE '2' TO VIEW ALL TRANSACTIONS\n\nTYPE '3' TO VIEW ALL REGISTRATIONS");
+    printf("\n\n\t\t\tType:");
     scanf("%d",&p);
     if(p==1)
     {
@@ -120,10 +142,15 @@ void adminmode()
         system("cls");
         old_record();
     }
-    else
+    else if(p==3)
     {
      system("cls");
-     main();
+     allusers();
+    }
+    else
+    {
+        system("cls");
+        main();
     }
 }
 else
@@ -437,7 +464,7 @@ void book_ticket()
             {
                 if(store[k]==j+1)
                 {
-                    printf("\t*");
+                    printf("\t**");
                     d=d+1;
                 }
             }
@@ -451,7 +478,7 @@ void book_ticket()
         printf("\n");
     }
     fclose(ufp);
-    printf("\n\n\t\t\t\t *-->NOT AVILABLE\n\n\n");
+    printf("\n\n\t\t\t\t**-->NOT AVILABLE\n\n\n");
     printf("\n Please Choose the Seat Number:\n");
     for(i=0; i<total_seat; i++)
     {
