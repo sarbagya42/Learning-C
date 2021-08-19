@@ -152,8 +152,8 @@ printf("\n\n\n\n\n\t\t\t\t\t\t\t\t\tType the Admin Password:");
    ok[index] = '\0';
     if(strcmp(ok,ma)==0)
     {
-    printf("\nTYPE '1' to INSERT MOVIE\n\nTYPE '2' TO VIEW ALL TRANSACTIONS\n\nTYPE '3' TO VIEW ALL REGISTRATIONS");
-    printf("\n\n\t\t\tType:");
+    printf("\n\n\t\t\t\t\t\t\t\t\tTYPE '1' to INSERT MOVIE\n\n\t\t\t\t\t\t\t\t\tTYPE '2' TO VIEW ALL TRANSACTIONS\n\n\t\t\t\t\t\t\t\t\tTYPE '3' TO VIEW ALL REGISTRATIONS");
+    printf("\n\n\n\t\t\t\t\t\t\t\tType:");
     scanf("%d",&p);
     if(p==1)
     {
