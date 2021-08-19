@@ -30,7 +30,6 @@ void loginsystem(int);
 int seat = 60 ;
 void insert_details();//for inserting movie details
 void viewAll(); // for view all data
-void find(); // for finding data
 void book_ticket(); //for booking tickets
 void old_record(); //for view old recorrds of users,booked tickets
 void adminmode();
@@ -47,9 +46,9 @@ int main()
         printf("\n");
         printf("\n");
         printf("\n");
-         printf("\n\t\t\t\t\t\t\t\t\t===================================\n");
-      printf("\t\t\t\t\t\t\t\t\t\t WELCOME TO THE THEATRE C\n");
-      printf("\t\t\t\t\t\t\t\t\t\===================================\n");
+         printf("\n\t\t\t\t\t\t\t\t\t====================================\n");
+      printf("\t\t\t\t\t\t\t\t\t\tWELCOME TO THE THEATRE C\n");
+      printf("\t\t\t\t\t\t\t\t\t\====================================\n");
       printf("\n");
       printf("\n");
         printf("\n");
@@ -62,11 +61,10 @@ int main()
         printf("\n\t\t\t\t\t\t\t\t\tPress <1> LOGIN OR REGISTER TO BOOK A MOVIE\n");
         printf("\n\t\t\t\t\t\t\t\t\tPress <2> ADMIN MODE\n");
         printf("\n\t\t\t\t\t\t\t\t\tPress <3> VIEW ALL MOVIES\n");
-        printf("\n\t\t\t\t\t\t\t\t\tPress <4> FIND MOVIE\n");
-        printf("\n\t\t\t\t\t\t\t\t\tPress <5> ABOUT US\n");
-        printf("\n\t\t\t\t\t\t\t\t\tPress <6> SUPPORT\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <4> ABOUT US\n");
+        printf("\n\t\t\t\t\t\t\t\t\tPress <5> SUPPORT\n");
         printf("\n\t\t\t\t\t\t\t\t\tPress <0> EXIT\n");
-        printf("\n\t\t\t\t\t\t\tEnter your Choice ::");
+        printf("\n\t\t\t\t\t\t\tENTER YOUR CHOICE::");
         scanf("%d",&ch);
         switch (ch)
         {
@@ -79,15 +77,12 @@ int main()
             case 3:
                 viewAll();
             break;
-            case 4:
-                find();
-            break;
-            case 6:
+            case 5:
             support();
             break;
-            case 5:
+            case 4:
                 system("cls");
-            printf("\n\t\t\t\t OUR GOAL:CUSTOMER SATISFACTION\n\t\t\t\t\t ESTABLISHED: 1990\t\t\n\t\t\t WE HAVE MORE THAN 30 YEARS OF SERVICE EXPERIENCE.\n\n\t\t\t\t\t MESSAGE FROM THE OWNER:\n\t\t WE ALWAYS TRY OUR BEST TO GIVE QUALTITY SERVICE TO OUR CUSTOMERS.\n\t\tIF YOU HAVE ANY COMPLAINS AND QUERIES YOU CAN CONTACT OUR SUPPORTING TEAM.\n\n");
+            printf("\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t|||ABOUT US|||\n\t\t\t\t\t\t\t\t\t\tOUR GOAL:CUSTOMER SATISFACTION\n\t\t\t\t\t\t\t\t\t\t\tESTABLISHED:1990\t\t\n\t\t\t\t\t\t\t\t\tWE HAVE MORE THAN 30 YEARS OF SERVICE EXPERIENCE.\n\n\t\t\t\t\t\t\t\t\t\t\tMESSAGE FROM THE OWNER:\n\t\t\t\t\t\t\t\t WE ALWAYS TRY OUR BEST TO GIVE QUALTITY SERVICE TO OUR CUSTOMERS.\n\t\t\t\t\t\t\tIF YOU HAVE ANY COMPLAINS AND QUERIES YOU CAN CONTACT OUR SUPPORTING TEAM.\n\n");
             break;
             case 0:
                 exit(0);
@@ -121,8 +116,8 @@ void allusers()
 void support()
 {
     system("cls");
-    printf("\t\t\t\t\t|||CUSTOMER SUPPORT|||\n");
-    printf("\n\t\t\t\tIF YOU HAVE ANY QUERIES YO CAN CONTACT US AT:\n\n\t\t\t\t\t+977-9823833365 (Sarbagya)\n\n \t\t\t\t\t+977-9862262314 (Rhythm)\n\n\t\t\t\t\t+977-9849186540(Aabhash)\n\n\t\t\t\t\t+977-9866547115(Pranesh)\n\n\t\t\tAlso you can email us at: attidamiprojects69@cmail.com\n");
+    printf("\t\t\t\t\t\t\t\t\t\t |||CUSTOMER SUPPORT|||\n");
+    printf("\n\t\t\t\t\t\t\t\t\tIF YOU HAVE ANY QUERIES YO CAN CONTACT US AT:\n\n\t\t\t\t\t\t\t\t\t\t+977-9823833365 (Sarbagya)\n\n \t\t\t\t\t\t\t\t\t\t+977-9862262314 (Rhythm)\n\n\t\t\t\t\t\t\t\t\t\t+977-9849186540(Aabhash)\n\n\t\t\t\t\t\t\t\t\t\t+977-9866547115(Pranesh)\n\n\t\t\t\t\t\t\t\tAlso you can email us at: attidamiprojects69@cmail.com\n");
 }
 void adminmode()
 {
@@ -131,7 +126,13 @@ void adminmode()
     system("cls");
     char c;
    int index = 0;
-printf("\n\t\t\tType the Admin Password:");
+printf("\n\t\t\t\t\t\t\t====================================================================\n");
+        printf("\n");
+        printf("\t\t\t\t\t\t\t\t\tMOVIE TICKET BOOKING SYSTEM: ADMIN PORTAL ");
+        printf("\n");
+        printf("\n\t\t\t\t\t\t\t====================================================================");
+
+printf("\n\n\n\n\n\t\t\t\t\t\t\t\t\tType the Admin Password:");
    /* 13 is ASCII value of Enter key */
    while((c = getch())!=13){
        if(index < 0)
@@ -288,40 +289,6 @@ int loginn()
     loginsystem(k);
     }
     fclose(bpp);
-}
-
-void find() //find details
-{
-	struct book b;
-	FILE *fp;
-	int tempprice;
-    char ch[20];
-	printf("Enter movie code :");
-	scanf("%s",ch);
-	//system("clear");
-	fp = fopen("data.txt","r+b");
-	if(fp == NULL)
-	{
-		printf("file not found !");
-		exit(1);
-	}
-	else
-	{
-        system("cls");
-        while(fread(&b, sizeof(struct book), 1, fp))
-	    {
-            if(strcmp(ch,b.code)==0)
-            {
-				printf("%Movie Code:%s\t",b.code);
-		        printf("Movie Name: %s\t",b.name);
-		        printf("Movie Release Date: %d\t",b.date);
-                printf("Ticket Price:NRs %d\t",b.cost);
-                printf("\n");
-                printf("\n");
-            }
-        }
-    }
-    fclose(fp);
 }
 void insert_details()
 {
