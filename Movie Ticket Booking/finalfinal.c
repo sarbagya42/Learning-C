@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include <string.h>
 #include<conio.h>
+#include<dos.h>
 struct book
 {
 	char code[20];
@@ -47,9 +48,9 @@ int main()
         printf("\n");
         printf("\n");
         printf("\n");
-         printf("\n\t\t\t\t\t\t\t\t\t====================================\n");
+         printf("\n\t\t\t\t\t\t\t\t\t+++++++++++++++++++++++++++++++++++\n");
       printf("\t\t\t\t\t\t\t\t\t\tWELCOME TO THE THEATRE C\n");
-      printf("\t\t\t\t\t\t\t\t\t\====================================\n");
+      printf("\t\t\t\t\t\t\t\t\t\+++++++++++++++++++++++++++++++++++\n");
       printf("\n");
       printf("\n");
         printf("\n");
@@ -229,13 +230,24 @@ void loginsystem(int m)
 
 int registration()
 {
-    printf("\n\t\t\t\t\tTHE THEATRE C REGISTRATION PORTAL\n");
+    printf("\n\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+    printf("\n");
+    printf("\t\t\t\t\t\tTHE THEATRE C");
+    printf("\n");
+    printf("\n\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    printf("\n");
+    printf("\n\t\t\t====================================================================\n");
+    printf("\n");
+    printf("\t\t\t\tMOVIE TICKET BOOKING SYSTEM: REGISTRATION PORTAL");
+    printf("\n");
+    printf("\n\t\t\t====================================================================");
+    printf("\n");
     struct logon a;
     FILE *app;
     app=fopen("loginn.txt","a+b");
-    printf("\n\n\t\t\t\t\tPlease Type Your FULL NAME:");
+    printf("\n\n\t\t\t\tPlease Type Your FULL NAME:");
     gets(a.fname);
-    printf("\n\t\t\t\t\tPlease Choose a USERNAME and a STRONG PASSWORD:\n");
+    printf("\n\t\t\t\tPlease Choose a USERNAME and a STRONG PASSWORD:\n");
     printf("\n\t\t\t\t\tType USERNAME:");
     gets(a.username);
     printf("\n\t\t\t\t\tType PASSWORD:");
@@ -247,7 +259,17 @@ int registration()
 }
 int loginn()
 {
-    printf("\n\t\t\t\t\tTHE THEATRE C LOGIN PORTAL\n");
+    printf("\n\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+    printf("\n");
+    printf("\t\t\t\t\t\tTHE THEATRE C");
+    printf("\n");
+    printf("\n\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    printf("\n\t\t\t====================================================================\n");
+    printf("\n");
+    printf("\t\t\t\tMOVIE TICKET BOOKING SYSTEM: LOGIN PORTAL");
+    printf("\n");
+    printf("\n\t\t\t====================================================================");
+    printf("\n");
     char usernam[90];
     char pass[90];
     int k=0;
@@ -334,13 +356,19 @@ void viewAll()
 	else
 	{
 	    system("cls");
-	    printf("\n\t\t\t\t\t||TRENDING MOVIES ON THE THEATRE C||\n\n");
+    printf("\n\t\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+    printf("\n");
+    printf("\t\t\t\t\t\t\tTHE THEATRE C");
+    printf("\n");
+    printf("\n\t\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    printf("\n");
+	    printf("\n\t\t\t\t\t\t||TRENDING MOVIES ON THE THEATRE C||\n\n");
 	    while(fread(&b, sizeof(struct book), 1, fp))
 	    {
-            printf("%Movie Code:%s\t",b.code);
-            printf("Movie Name: %s\t",b.name);
-            printf("Movie Release Date: %d\t",b.date);
-            printf("Per Ticket Price:NRs %d\t",b.cost);
+            printf("\t%Movie Code:%s\t",b.code);
+            printf("\tMovie Name: %s\t",b.name);
+            printf("\tMovie Release Date: %d\t",b.date);
+            printf("\tPer Ticket Price:NRs %d\t",b.cost);
             printf("\n");
             printf("\n");
         }
@@ -367,6 +395,11 @@ void book_ticket()
 	//cant we just use void viewall() ??
 	fp = fopen("data.txt","r+b");
 	ufp=fopen("oldTransaction.txt","r+b");
+    printf("\n\t\t\t====================================================================\n");
+    printf("\n");
+    printf("\t\t\t\tMOVIE TICKET BOOKING SYSTEM: BOOK A MOVIE ");
+    printf("\n");
+    printf("\n\t\t\t====================================================================");
 	printf("\n");
     printf("\n\t\t\t\t\t||TRENDING MOVIES ON THE THEATRE C||\n\n");
     while(fread(&b, sizeof(struct book), 1, fp))
@@ -393,6 +426,12 @@ void book_ticket()
 	else
 	{
 	    system("cls");
+    printf("\n\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+    printf("\n");
+    printf("\t\t\t\t\t\tTHE THEATRE C");
+    printf("\n");
+    printf("\n\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    printf("\n");
         while(fread(&b, sizeof(struct book), 1, fp))
 	    {
 	        if(strcmp(movie_code,b.code)==0)
@@ -512,6 +551,7 @@ void book_ticket()
 	printf("\n\t\t\t\t\t\t\t\t\t\tCost per ticket : NRs. %d\n",tempprice);
 	printf("\n\t\t\t\t\t\t\t\t\t\tTotal Amount : NRs. %d\n",total_amount);
 	printf("\n\t\t\t\t\t\t\t\t\t\tSeat(s) Chosen\n");
+	printf("\a");
 	printf("\t\t\t\t\t\t\t\t\t\t\t");
     for(i=0; i<total_seat; i++)
     {
