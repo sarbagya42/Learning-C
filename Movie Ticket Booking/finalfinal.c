@@ -404,10 +404,10 @@ void book_ticket()
     printf("\n\t\t\t\t\t||TRENDING MOVIES ON THE THEATRE C||\n\n");
     while(fread(&b, sizeof(struct book), 1, fp))
 	{
-        printf("%Movie Code:%s\t",b.code);
-        printf("Movie Name: %s\t",b.name);
-        printf("Movie Release Date: %d\t",b.date);
-        printf("Per Ticket Price:NRs %d\t",b.cost);
+        printf("\tMovie Code:%s\t",b.code);
+        printf("\tMovie Name: %s\t",b.name);
+        printf("\tMovie Release Date: %d\t",b.date);
+        printf("\tPer Ticket Price:NRs %d\t",b.cost);
         printf("\n");
         printf("\n");
     }
@@ -432,28 +432,30 @@ void book_ticket()
     printf("\n");
     printf("\n\t\t\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     printf("\n");
+    printf("\n");
         while(fread(&b, sizeof(struct book), 1, fp))
 	    {
 	        if(strcmp(movie_code,b.code)==0)
             {
-                printf("%Movie Code:%s\t",b.code);
-		        printf("Movie Name: %s\t",b.name);
+                printf("\t%Movie Code:%s\t",b.code);
+		        printf("\tMovie Name: %s\t",b.name);
 		        strcpy(tempname,b.name);
-		        printf("Movie Release Date: %d\t",b.date);
-                printf("Per Ticket Price:NRs %d\t",b.cost);
+		        printf("\tMovie Release Date: %d\t",b.date);
+                printf("\tPer Ticket Price:NRs %d\t",b.cost);
                 tempprice=b.cost;
                 printf("\n");
                 printf("\n");
             }
         }
 	}
-	printf("\n* Fill Details  *");
-	printf("\n Please Enter Your name :");
+	printf("\n\t\t***FILL DETAILS***");
+	printf("\n");
+	printf("\n\tPlease Enter Your name :");
 	gets(name);
 	gets(name);
-	printf("\n Mobile number :");
+	printf("\n\tMobile Number :");
 	gets(mobile);
-	printf("\n Total number of tickets :");
+	printf("\n\tTotal Number Of Tickets :");
 	scanf("%d",&total_seat);
 	system("cls");
 	printf("\n");
@@ -494,10 +496,19 @@ void book_ticket()
             }
         }
 	}
+                      printf("\n\t\t====================================================================\n");
+                      printf("\n");
+                      printf("\t\t\tMOVIE TICKET BOOKING SYSTEM: BOOK SEATS ");
+                      printf("\n");
+                      printf("\n\t\t====================================================================");
+                      printf("\n");
+                      printf("\n");
     printf("\t\t\t\t\t||SCREEN||\n\n");
     fclose(ufp);
     fclose(fp);
     ufp=fopen("oldTransaction.txt","r+b");
+    int z;
+    z:
     while(fread(&o, sizeof(struct old), 1, ufp))
     {
         if(strcmp(o.moviename,tempname)==0)
@@ -538,6 +549,24 @@ void book_ticket()
         printf("Seat %d:",i+1);
         scanf("%d",&seat[i]);
     }
+for(i=0; i<total_seat; i++)
+{
+    for(j=0; j<c; j++)
+    {
+        if(seat[i]==store[j])
+        {
+            system("cls");
+              printf("\n\t====================================================================\n");
+                      printf("\n");
+                      printf("\t\t\tMOVIE TICKET BOOKING SYSTEM: BOOK SEATS ");
+                      printf("\n");
+                      printf("\n\t====================================================================");
+                      printf("\n");
+                      printf("\n\n\t\tREQUESTED SEAT IS ALREADY BOOKED.PLEASE TRY AGAIN!\n\n");
+                     goto z;
+        }
+    }
+}
 	total_amount = tempprice * total_seat;
     system("cls");
 	printf("\n\t\t\t\t\t\t\t\t\t\t ***** ENJOY THE MOVIE ****\n");
