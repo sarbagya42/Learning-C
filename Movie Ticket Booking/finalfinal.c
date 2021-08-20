@@ -119,7 +119,7 @@ void support()
 {
     system("cls");
     printf("\t\t\t\t\t\t\t\t\t\t |||CUSTOMER SUPPORT|||\n");
-    printf("\n\t\t\t\t\t\t\t\t\tIF YOU HAVE ANY QUERIES YO CAN CONTACT US AT:\n\n\t\t\t\t\t\t\t\t\t\t+977-9823833365 (Sarbagya)\n\n \t\t\t\t\t\t\t\t\t\t+977-9862262314 (Rhythm)\n\n\t\t\t\t\t\t\t\t\t\t+977-9849186540(Aabhash)\n\n\t\t\t\t\t\t\t\t\t\t+977-9866547115(Pranesh)\n\n\t\t\t\t\t\t\t\tAlso you can email us at: attidamiprojects69@cmail.com\n");
+    printf("\n\t\t\t\t\t\t\t\t\tIF YOU HAVE ANY QUERIES YOU CAN CONTACT US AT:\n\n\t\t\t\t\t\t\t\t\t\t+977-9823833365 (Sarbagya)\n\n \t\t\t\t\t\t\t\t\t\t+977-9862262314 (Rhythm)\n\n\t\t\t\t\t\t\t\t\t\t+977-9849186540(Aabhash)\n\n\t\t\t\t\t\t\t\t\t\t+977-9866547115(Pranesh)\n\n\t\t\t\t\t\t\t\tAlso you can email us at: attidamiprojects69@cmail.com\n");
 }
 void adminmode()
 {
@@ -528,7 +528,7 @@ void book_ticket()
             {
                 if(store[k]==j+1)
                 {
-                    printf("\t**");
+                    printf("\tx");
                     d=d+1;
                 }
             }
@@ -542,7 +542,7 @@ void book_ticket()
         printf("\n");
     }
     fclose(ufp);
-    printf("\n\n\t\t\t\t**-->NOT AVILABLE\n\n\n");
+    printf("\n\n\t\t\t\tx-->NOT AVILABLE\n\n\n");
     printf("\n Please Choose the Seat Number:\n");
     for(i=0; i<total_seat; i++)
     {
@@ -569,6 +569,8 @@ for(i=0; i<total_seat; i++)
 }
 	total_amount = tempprice * total_seat;
     system("cls");
+    printf("\n");
+    printf("\n");
 	printf("\n\t\t\t\t\t\t\t\t\t\t ***** ENJOY THE MOVIE ****\n");
 	printf("\n\t\t\t\t\t\t\t\t\t\t-------Costumer Details:-------\n");
 	printf("\n\t\t\t\t\t\t\t\t\t\tName : %s\n",name);
