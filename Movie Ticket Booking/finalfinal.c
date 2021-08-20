@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <string.h>
+#include<conio.h>
 struct book
 {
 	char code[20];
@@ -122,10 +123,7 @@ void support()
 void adminmode()
 {
     int p;
-    char ok[10];
     system("cls");
-    char c;
-   int index = 0;
 printf("\n\t\t\t\t\t\t\t====================================================================\n");
         printf("\n");
         printf("\t\t\t\t\t\t\t\t\tMOVIE TICKET BOOKING SYSTEM: ADMIN PORTAL ");
@@ -133,24 +131,26 @@ printf("\n\t\t\t\t\t\t\t========================================================
         printf("\n\t\t\t\t\t\t\t====================================================================");
 
 printf("\n\n\n\n\n\t\t\t\t\t\t\t\t\tType the Admin Password:");
+  char password[128], c;
+   int index = 0;
    /* 13 is ASCII value of Enter key */
-   while((c = getch())!=13){
+   while((c = getch()) != 13){
        if(index < 0)
            index = 0;
        /* 8 is ASCII value of BACKSPACE character */
-       if(c==8)
-        {
+       if(c == 8){
            putch('\b');
-           putch(NULL);
+           putch(' ');
            putch('\b');
            index--;
        continue;
        }
-       ok[index++] = c;
+       password[index++] = c;
        putch('*');
    }
-   ok[index] = '\0';
-    if(strcmp(ok,ma)==0)
+   password[index] = '\0';
+
+    if(strcmp(password,ma)==0)
     {
     printf("\n\n\t\t\t\t\t\t\t\t\tTYPE '1' to INSERT MOVIE\n\n\t\t\t\t\t\t\t\t\tTYPE '2' TO VIEW ALL TRANSACTIONS\n\n\t\t\t\t\t\t\t\t\tTYPE '3' TO VIEW ALL REGISTRATIONS");
     printf("\n\n\n\t\t\t\t\t\t\t\t\tTYPE:");
@@ -180,7 +180,8 @@ printf("\n\n\n\n\n\t\t\t\t\t\t\t\t\tType the Admin Password:");
 else
 {
 system("cls");
-printf("\t\t\t\t\tWRONG ADMIN PASSWORD!");
+printf("\n");
+printf("\t\t\t\t\t\t\t\t\t\t!!WRONG ADMIN PASSWORD!!");
 main();
 }
 }
@@ -263,7 +264,7 @@ int loginn()
        /* 8 is ASCII value of BACKSPACE character */
        if(c == 8){
            putch('\b');
-           putch(NULL);
+           putch(' ');
            putch('\b');
            index--;
        continue;
@@ -507,10 +508,10 @@ void book_ticket()
 	puts(mobile);
 	printf("\n\t\t\t\t\t\t\t\t\t\tMovie Name:");
 	puts(tempname);
-	printf("\n\t\t\t\t\t\t\t\t\t\tTotal Seats : %d\n",total_seat);
-	printf("\n\t\t\t\t\t\t\t\t\t\tCost per ticket : %d\n",tempprice);
-	printf("\n\t\t\t\t\t\t\t\t\t\tTotal Amount : %d\n",total_amount);
-	printf("\n\t\t\t\t\t\t\t\t\t\tSeats Chosen\n");
+	printf("\n\t\t\t\t\t\t\t\t\t\tTotal Seat(s) : %d\n",total_seat);
+	printf("\n\t\t\t\t\t\t\t\t\t\tCost per ticket : NRs. %d\n",tempprice);
+	printf("\n\t\t\t\t\t\t\t\t\t\tTotal Amount : NRs. %d\n",total_amount);
+	printf("\n\t\t\t\t\t\t\t\t\t\tSeat(s) Chosen\n");
 	printf("\t\t\t\t\t\t\t\t\t\t\t");
     for(i=0; i<total_seat; i++)
     {
