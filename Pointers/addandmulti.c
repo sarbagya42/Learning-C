@@ -1,3 +1,6 @@
+//Write a complete program that adds the corresponding elements
+//of two matrices if the elements are positive, otherwise multiply the corresponding elements 
+//using the concept of passing array to the function and pointer. [5] [067]
 #include <stdio.h>
 #include <stdlib.h>
 int addmulti(int *p, int *q, int *r, int);
