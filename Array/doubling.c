@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 #define m 2
 #define n 3
 int read(int x[10][10], int w[10][10]);
