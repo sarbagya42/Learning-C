@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 //MATRIX MULTIPLICATION BY SARBAGYA
 int prime(int);
 int main()
