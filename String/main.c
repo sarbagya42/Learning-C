@@ -9,11 +9,6 @@ printf("Type any String:");
 gets(any);
 for(i=0; i<strlen(any); i++)
 {
- if(any[i]==' ')
- {
-spaces[k]=i;
-k++;
- }
  for(j=i+1; j<strlen(any); j++)
  {
   if(any[j]<any[i])
@@ -25,8 +20,5 @@ k++;
 }
 }
 puts(any);
-for(i=0; i<k; i++)
-{
-    printf("%d",spaces[i]);
-}
+return 0;
 }
